@@ -1,0 +1,364 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stallion hotel</title>
+    <style>
+        /* Reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        
+        body {
+          font-family: 'Arial', sans-serif;
+          line-height: 1.6;
+        }
+        
+        /* Navbar */
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px;
+          background: #f4f4f4;
+        }
+        
+        .navbar-left .logo {
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+        }
+        
+        .navbar-right a, .navbar-right .sign-up {
+          margin-left: 20px;
+          text-decoration: none;
+          color: black;
+          font-size: 1rem;
+        }
+        
+        .navbar-right .sign-up {
+          background-color: black;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 50px;
+          background-color: #e8f5fe;
+        }
+        
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+        
+        .hero-text p {
+          margin-top: 20px;
+          font-size: 1.2rem;
+        }
+        
+        .cta-buttons {
+          margin-top: 20px;
+        }
+        
+        .cta-buttons .book-now, .cta-buttons .play-video  { 
+          padding: 10px 20px;
+          border: none;
+          background: black;
+          color: white;
+          cursor: pointer;
+          margin-right: 10px;
+        }
+        .video {
+          width: 60%;
+          height:70%;
+        }
+        
+        
+        /* Statistics Section */
+        .statistics {
+          display: flex;
+          justify-content: space-between;
+          padding: 50px;
+          background-color: grey;
+        }
+        
+        .stat-box {
+          text-align: center;
+          width: 22%;
+        }
+        
+        .stat-box h2 {
+          font-size: 2.5rem;
+          color: #333;
+          width: 22%;
+        }
+        
+        /* Services Section */
+        .services {
+          text-align: center;
+          padding: 50px;
+          background-color: #fff;
+        }
+        
+        .service h2 {
+          margin-bottom: 20px;
+        }
+        
+        .staff {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .activities {
+          text-align: center;
+          width: 22%;
+          padding: 20px;
+          background-color: #f4f4f4;
+        }
+        
+        .clients{
+          margin-top: 10px;
+        }
+        
+        .accomodation {
+          font-size: 2rem;
+          color: #333;
+        }
+        
+        /* food Section */
+        .food {
+          text-align: center;
+          padding: 50px;
+          background-color: #f9f9f9;
+        }
+        
+        .pastries {
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          padding: 20px;
+        }
+        
+        .afri {
+          width: 22%;
+          background-color: #fff;
+          padding: 20px;
+          text-align: center;
+        }
+        
+        .euro {
+          width: 100%;
+          border-radius: 50%;
+        }
+        
+        /* Footer Section */
+        footer {
+          background-color: #333;
+          color: white;
+          padding: 50px;
+        }
+        
+        .footer-top {
+          display: flex;
+          justify-content: space-between;
+        }
+        
+        .footer-links ul {
+          list-style: none;
+        }
+        
+        .footer-links ul li {
+          margin-bottom: 10px;
+        }
+        
+        .footer-bottom {
+          text-align: center;
+          margin-top: 20px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .navbar-right {
+            display: none;
+          }
+        
+          .hero {
+            flex-direction: column;
+            text-align: center;
+          }
+        
+          .statistics {
+            flex-direction: column;
+            text-align: center;
+          }
+        
+          .service-cards, .doctor-cards {
+            flex-direction: column;
+            align-items: center;
+          }
+        
+          .service-card, .doctor-card {
+            width: 80%;
+            margin-bottom: 20px;
+          }
+        }
+        img {
+          width: 50%;
+          height: 20%;
+        }
+  
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo"><strong>Sta</strong>llion</a>
+        </div>
+        <div class="navbar-right">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Facility</a>
+            <a href="#">About Us</a>
+            <a href="#">Log In</a>
+            <button class="sign-up">Sign Up</button>
+        </div>
+    </nav>
+
+    <!-- Main Banner Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your Satisfaction is  <br>our priority </h1>
+            <p></p>
+            <div class="cta-buttons">
+                <button class="book-now">Book Now</button>
+                <button class="play-video">Play Video</button>
+            </div>
+        </div>
+        <div class="video-container">
+          <video id="video" class="video" width="500" poster="" controls style="display:none;">
+              <source src="https://cdn.pixabay.com/video/2015/10/27/1192-143842659_large.mp4" type="video/mp4">
+  
+          </video>
+          <!-- Poster image before the video is played -->
+          <img id="video-poster" src="" alt="" class="poster">
+      </div>
+        <div class="video">
+          <source src="https://cdn.pixabay.com/video/2015/10/27/1192-143842659_large.mp4"type="video">
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="stat-box">
+          <container>
+            <h2>95%</h2>
+            <p>Customer Satisfaction</p>
+          </container>
+        </div>
+        <div class="stat-box">
+            <h2>1,500+</h2>
+            <p>Qualified staff</p>
+        </div>
+        <div class="stat-box">
+            <h2>3,000+</h2>
+            <p>Happy clients</p>
+        </div>
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Commitment to Excellence</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>what  we  offer</h2>
+        <div class="service">
+            <div class="staff">
+                <div class="icon"><i class="fa fa-user-md"></i></div>
+                <h3>Qualified staff</h3>
+                <p>Our staff are trained to give the best service</p>
+            </div>
+            <div class="activities">
+                <div class="icon"><i class="fa fa-user-md"></i></div>
+                <h3>fun & games</h3>
+                <p>various fun activities</p>
+            </div>
+            <div class="clients">
+                <div class="icon"><i class="fa fa-users"></i></div>
+                <h3>clients</h3>
+                <p>Your Satisfaction is our priority</p>
+            </div>
+            <div class="accomodation">
+                <div class="icon"><i class="fa fa-comments"></i></div>
+                <h3>Accomodation</h3>
+                <p>we have 24 hr room service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- food Section -->
+    <section class="food">
+        <h2>food offered</h2>
+        <div class="food">
+            <div class="pastries">
+                <img src="https://images.pexels.com/photos/14705210/pexels-photo-14705210.jpeg?cs=srgb&dl=pexels-kadiravsarr-14705210.jpg&fm=jpg&_gl=1*1jelzda*_ga*MjgzNTQzODk1LjE3MjYzODg4NTM.*_ga_8JE65Q40S6*MTcyNjM4ODg1Mi4xLjEuMTcyNjM5MDc2OS4wLjAuMA..
+  " alt="pastries">
+                <h3>pastries</h3>
+                <p>we serve pastries fresh from our bakery</p>
+            </div>
+            <div class="afri">
+                <img src="https://images.pexels.com/photos/23025171/pexels-photo-23025171/free-photo-of-woman-eating-from-handmade-plate.jpeg" alt="African">
+                <h3>african  dishes</h3>
+                <p>we have from all  over africa</p>
+            </div>
+            <div class="euro">
+                <img src="https://media.istockphoto.com/id/1457979959/photo/snack-junk-fast-food-on-table-in-restaurant-soup-sauce-ornament-grill-hamburger-french-fries.jpg?s=1024x1024&w=is&k=20&c=S3F3bV7Qv_mGWHGRjK2Xcx33qSODKaXbbhcZyrJBbBc=" alt="european">
+                <h3>european cuisines</h3>
+                <p>You can find some of your favourite european  cuisines  here</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-logo">
+                <strong>Sta</strong>llion
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">food </a></li>
+                    <li><a href="#">accomodation</a></li>
+                    <li><a href="#">Fun </a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Hotel</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">comments</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Stallion hotel. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
